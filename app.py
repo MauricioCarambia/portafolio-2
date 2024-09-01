@@ -13,7 +13,7 @@ def index():
         consulta = request.form['consulta']
 
         # Configuración del correo
-        destinatario = "mcarambia@gmail.com"  # Cambia esto a tu dirección de correo
+        destinatario = ""  # Cambia esto a tu dirección de correo
         nombre = f"Consulta de {nombre}"
         asunto = f"Sobre {asunto}"
         mensaje = f"Nombre: {nombre}\nEmail: {email}\n\nConsulta:\n{consulta}"
@@ -29,8 +29,8 @@ def enviar_correo(destinatario, asunto, mensaje, email):
     # Configuración del servidor SMTP
     servidor = 'smtp.gmail.com'  # Cambia esto al servidor SMTP de tu proveedor de correo
     puerto = 587
-    usuario = 'mcarambia@gmail.com'  # Tu dirección de correo
-    contraseña = 'esternocleidomastoideo195'  # Tu contraseña de correo
+    usuario = ''  # Tu dirección de correo
+    contraseña = ''  # Tu contraseña de correo
 
     msg = MIMEText(mensaje)
     msg['Subject'] = asunto
